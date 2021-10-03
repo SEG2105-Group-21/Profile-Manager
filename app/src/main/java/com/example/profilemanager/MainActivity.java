@@ -3,7 +3,6 @@ package com.example.profilemanager;
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContract;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,6 +14,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+/**
+ * Profile Manager app for Android devices
+ *
+ * This app allows a user to manage sports teams. The app is contains Google Maps integration.
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -30,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     //method to open google maps in our app
     //method used for our OnCLick for the "open in google maps" button
 
-    public void OnOpenInGoogleMaps(View view){
+    public void onOpenInGoogleMaps(View view){
 
         //need to add teamAddressTextView later
         EditText teamAddress = (EditText) findViewById(R.id.teamAddressTextView);
@@ -63,34 +67,34 @@ public class MainActivity extends AppCompatActivity {
 
                         //need to add all of the flag ID's / images later on
                         String drawableName = "flag02";
-                        switch (data.getIntExtra("imageID", R.id.flagid00)){
-                            case R.id.flagid00:
-                                drawableName = "flag_00";
+                        switch (data.getIntExtra("imageID", R.id.avatarImage)){
+                            case R.id.avatarImage:
+                                drawableName = "flag_canada";
                                 break;
-                            case R.id.flagid01:
-                                drawableName = "flag_01";
-                                break;
-                            case R.id.flagid02:
-                                drawableName = "flag_02";
-                                break;
-                            case R.id.flagid03:
-                                drawableName = "flag_03";
-                                break;
-                            case R.id.flagid04:
-                                drawableName = "flag_04";
-                                break;
-                            case R.id.flagid05:
-                                drawableName = "flag_05";
-                                break;
-                            case R.id.flagid06:
-                                drawableName = "flag_06";
-                                break;
-                            case R.id.flagid07:
-                                drawableName = "flag_07";
-                                break;
-                            case R.id.flagid08:
-                                drawableName = "flag_08";
-                                break;
+//                            case R.id.flagid01:
+//                                drawableName = "flag_01";
+//                                break;
+//                            case R.id.flagid02:
+//                                drawableName = "flag_02";
+//                                break;
+//                            case R.id.flagid03:
+//                                drawableName = "flag_03";
+//                                break;
+//                            case R.id.flagid04:
+//                                drawableName = "flag_04";
+//                                break;
+//                            case R.id.flagid05:
+//                                drawableName = "flag_05";
+//                                break;
+//                            case R.id.flagid06:
+//                                drawableName = "flag_06";
+//                                break;
+//                            case R.id.flagid07:
+//                                drawableName = "flag_07";
+//                                break;
+//                            case R.id.flagid08:
+//                                drawableName = "flag_08";
+//                                break;
                             default:
                                 drawableName = "flag_02";
                                 break;
