@@ -10,88 +10,81 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="528dp"
-        android:text="Sports Team Manager"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="42dp"
+        android:text="@string/app_name"
         android:textAlignment="center"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/avatarImage"
         android:layout_width="240dp"
         android:layout_height="120dp"
-        android:layout_marginStart="85dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="86dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="61dp"
         android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:srcCompat="@drawable/flag_canada" />
 
     <TextView
         android:id="@+id/team_name"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="167dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="168dp"
-        android:text="Team Name"
+        android:layout_height="19dp"
+        android:layout_marginEnd="143dp"
+        android:text="@string/name_sub"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/enterWonderName" />
 
     <EditText
         android:id="@+id/enterWonderName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="101dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="76dp"
         android:ems="10"
-        android:hint="Enter Country Name"
+        android:hint="@string/name_hint"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/avatarImage" />
 
     <EditText
         android:id="@+id/teamAddressTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="76dp"
         android:ems="10"
-        android:hint="Enter Team Address"
+        android:hint="@string/address_hint"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/team_name" />
 
     <TextView
         android:id="@+id/team_address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="10dp"
-        android:text="Team Address"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="136dp"
+        android:text="@string/address_sub"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/teamAddressTextView" />
 
     <Button
         android:id="@+id/google_maps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="100dp"
-        android:text="Open in Google Maps"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="54dp"
+        android:text="@string/google_maps"
         android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/team_address" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Profile Manager</string>
+    <string name="app_name">World Wonders Manager</string>
+    <string name="name_hint">Enter Wonder Name</string>
+    <string name="name_sub">Wonder Name</string>
+    <string name="address_hint">Enter Wonder Address</string>
+    <string name="address_sub">Wonder Address</string>
+    <string name="google_maps">Open in Google Maps</string>
 </resources>
