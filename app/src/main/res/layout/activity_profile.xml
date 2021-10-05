@@ -13,101 +13,114 @@
         android:layout_marginTop="60dp"
         android:layout_marginEnd="145dp"
         android:layout_marginBottom="21dp"
-        android:text="Select a new avatar"
+        android:text="@string/img_select"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/avatar_list"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TableLayout
-        android:stretchColumns="*"
         android:id="@+id/avatar_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="100dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="66dp"
         android:padding="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/select_avatar_text">
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="wrap_content"
+                android:id="@+id/colosseum"
+                android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginBottom="10dp"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:layout_weight="1"
+                tools:srcCompat="@drawable/img_00" />
 
             <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
+                android:id="@+id/pyramids"
+                android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginBottom="10dp"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:layout_weight="1"
+                tools:srcCompat="@drawable/img_01" />
 
             <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="wrap_content"
+                android:id="@+id/tajmahal"
+                android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginBottom="10dp"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:layout_weight="1"
+                tools:srcCompat="@drawable/img_02" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="wrap_content"
+                android:id="@+id/machupichu"
+                android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginBottom="10dp"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:layout_weight="1"
+                tools:srcCompat="@drawable/img_03" />
 
             <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="wrap_content"
+                android:id="@+id/eiffel"
+                android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginBottom="10dp"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:layout_weight="1"
+                tools:srcCompat="@drawable/img_04" />
 
             <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="wrap_content"
+                android:id="@+id/christ"
+                android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginBottom="10dp"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:layout_weight="1"
+                android:adjustViewBounds="false"
+                android:cropToPadding="false"
+                tools:srcCompat="@drawable/img_05" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="wrap_content"
+                android:id="@+id/stonehenge"
+                android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginBottom="10dp"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:layout_weight="1"
+                tools:srcCompat="@drawable/img_06" />
 
             <ImageView
-                android:id="@+id/imageView8"
-                android:layout_width="wrap_content"
+                android:id="@+id/pisa"
+                android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginBottom="10dp"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:layout_weight="1"
+                tools:srcCompat="@drawable/img_07" />
 
             <ImageView
-                android:id="@+id/imageView10"
-                android:layout_width="wrap_content"
+                android:id="@+id/nazca"
+                android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginBottom="10dp"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:layout_weight="1"
+                tools:srcCompat="@drawable/img_08" />
         </TableRow>
 
     </TableLayout>

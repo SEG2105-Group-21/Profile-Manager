@@ -28,7 +28,7 @@
         android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@drawable/flag_canada" />
+        app:srcCompat="@drawable/img_00" />
 
     <TextView
         android:id="@+id/team_name"

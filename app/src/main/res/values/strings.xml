@@ -5,4 +5,5 @@
     <string name="address_hint">Enter Wonder Address</string>
     <string name="address_sub">Wonder Address</string>
     <string name="google_maps">Open in Google Maps</string>
+    <string name="img_select">Select a new avatar</string>
 </resources>
