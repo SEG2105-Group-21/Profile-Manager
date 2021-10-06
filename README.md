@@ -1,3 +1,3 @@
 # Profile-Manager
 
-An Android app that manages sports teams.
+An Android app for booking world famous tourist destinations.
