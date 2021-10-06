@@ -68,33 +68,33 @@ public class MainActivity extends AppCompatActivity {
                         //need to add all of the flag ID's / images later on
                         String drawableName = "flag02";
                         switch (data.getIntExtra("imageID", R.id.avatarImage)){
-                            case R.id.avatarImage:
+                            case R.id.flagid00:
                                 drawableName = "flag_canada";
                                 break;
-//                            case R.id.flagid01:
-//                                drawableName = "flag_01";
-//                                break;
-//                            case R.id.flagid02:
-//                                drawableName = "flag_02";
-//                                break;
-//                            case R.id.flagid03:
-//                                drawableName = "flag_03";
-//                                break;
-//                            case R.id.flagid04:
-//                                drawableName = "flag_04";
-//                                break;
-//                            case R.id.flagid05:
-//                                drawableName = "flag_05";
-//                                break;
-//                            case R.id.flagid06:
-//                                drawableName = "flag_06";
-//                                break;
-//                            case R.id.flagid07:
-//                                drawableName = "flag_07";
-//                                break;
-//                            case R.id.flagid08:
-//                                drawableName = "flag_08";
-//                                break;
+                            case R.id.flagid01:
+                                drawableName = "flag_01";
+                                break;
+                            case R.id.flagid02:
+                                drawableName = "flag_02";
+                                break;
+                            case R.id.flagid03:
+                                drawableName = "flag_03";
+                                break;
+                            case R.id.flagid04:
+                                drawableName = "flag_04";
+                                break;
+                            case R.id.flagid05:
+                                drawableName = "flag_05";
+                                break;
+                            case R.id.flagid06:
+                                drawableName = "flag_06";
+                                break;
+                            case R.id.flagid07:
+                                drawableName = "flag_07";
+                                break;
+                            case R.id.flagid08:
+                                drawableName = "flag_08";
+                                break;
                             default:
                                 drawableName = "flag_02";
                                 break;
