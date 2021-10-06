@@ -11,10 +11,27 @@ import android.widget.ImageView;
 
 public class ProfileActivity extends AppCompatActivity {
 
+    // acts as a button. avatar00 corresponds to flagid00 in activity_profile.xml
+    ImageView avatar00;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        // TODO: The TableLayout named "avatar_list" in activity_profile.xml currently does not show up
+        //  on the screen. Must fix. - Kien
+
+        // this block of code below is currently redundant as the avatar images in TableLayout
+        //  doesn't even show up on screen. Edit or delete at your convenience. - Kien
+        avatar00 = (ImageView) findViewById(R.id.flagid00);
+
+        avatar00.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setTeamIcon(view);
+            }
+        });
     }
 
     // method that forwards the ID that the user clicks to later use as the avatar for the profile

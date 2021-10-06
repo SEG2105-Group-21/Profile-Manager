@@ -29,6 +29,7 @@
         android:layout_marginTop="66dp"
         android:padding="15dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/select_avatar_text">
 
         <TableRow
@@ -42,8 +43,8 @@
                 android:layout_height="100dp"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
-                tools:srcCompat="@drawable/img_00"
-                android:onClick="SetTeamIcon"/>
+                android:onClick="SetTeamIcon"
+                tools:srcCompat="@drawable/img_00" />
 
 
             <ImageView
@@ -52,8 +53,8 @@
                 android:layout_height="100dp"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
-                tools:srcCompat="@drawable/img_01"
-                android:onClick="SetTeamIcon"/>
+                android:onClick="SetTeamIcon"
+                tools:srcCompat="@drawable/img_01" />
 
             <ImageView
                 android:id="@+id/flagid02"
@@ -61,8 +62,8 @@
                 android:layout_height="100dp"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
-                tools:srcCompat="@drawable/img_02"
-                android:onClick="SetTeamIcon"/>
+                android:onClick="SetTeamIcon"
+                tools:srcCompat="@drawable/img_02" />
         </TableRow>
 
         <TableRow
@@ -76,8 +77,8 @@
                 android:layout_height="100dp"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
-                tools:srcCompat="@drawable/img_03"
-                android:onClick="SetTeamIcon"/>
+                android:onClick="SetTeamIcon"
+                tools:srcCompat="@drawable/img_03" />
 
             <ImageView
                 android:id="@+id/flagid04"
@@ -85,8 +86,8 @@
                 android:layout_height="100dp"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
-                tools:srcCompat="@drawable/img_04"
-                android:onClick="SetTeamIcon"/>
+                android:onClick="SetTeamIcon"
+                tools:srcCompat="@drawable/img_04" />
 
             <ImageView
                 android:id="@+id/flagid05"
@@ -96,8 +97,8 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="false"
                 android:cropToPadding="false"
-                tools:srcCompat="@drawable/img_05"
-                android:onClick="SetTeamIcon"/>
+                android:onClick="SetTeamIcon"
+                tools:srcCompat="@drawable/img_05" />
         </TableRow>
 
         <TableRow
@@ -111,8 +112,8 @@
                 android:layout_height="100dp"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
-                tools:srcCompat="@drawable/img_06"
-                android:onClick="SetTeamIcon"/>
+                android:onClick="SetTeamIcon"
+                tools:srcCompat="@drawable/img_06" />
 
             <ImageView
                 android:id="@+id/flagid07"
@@ -120,8 +121,8 @@
                 android:layout_height="100dp"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
-                tools:srcCompat="@drawable/img_07"
-                android:onClick="SetTeamIcon"/>
+                android:onClick="SetTeamIcon"
+                tools:srcCompat="@drawable/img_07" />
 
             <ImageView
                 android:id="@+id/flagid08"
@@ -129,8 +130,8 @@
                 android:layout_height="100dp"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
-                tools:srcCompat="@drawable/img_08"
-                android:onClick="SetTeamIcon"/>
+                android:onClick="SetTeamIcon"
+                tools:srcCompat="@drawable/img_08" />
         </TableRow>
 
     </TableLayout>
