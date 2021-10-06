@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-public class ProfileActivity extends AppCompatActivity{
+public class ProfileActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,13 +18,13 @@ public class ProfileActivity extends AppCompatActivity{
     }
 
     // method that forwards the ID that the user clicks to later use as the avatar for the profile
-    public void setTeamIcon(View view){
+    public void setTeamIcon(View view) {
 
         //creating a return intent to pass to the main activity
         Intent returnIntent = new Intent();
 
         // figuring out which image was clicked
-        ImageView selectedImage  = (ImageView) view;
+        ImageView selectedImage = (ImageView) view;
 
         // adding details to the return intent
         returnIntent.putExtra("imageID", selectedImage.getId());

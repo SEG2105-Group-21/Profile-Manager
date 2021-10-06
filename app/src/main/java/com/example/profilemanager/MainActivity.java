@@ -15,13 +15,14 @@ import android.widget.*;
 
 /**
  * Profile Manager app for Android devices
- *
+ * <p>
  * This app allows a user to manage sports teams. The app is contains Google Maps integration.
  */
 public class MainActivity extends AppCompatActivity {
 
     // create all buttons
-    Button btnGoogleMaps;
+    private Button btnGoogleMaps;
+    private ImageView avatarImageClickable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +30,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // initialize all buttons
+        avatarImageClickable = (ImageView) findViewById(R.id.avatarImage);
+        avatarImageClickable.bringToFront();
         btnGoogleMaps = findViewById(R.id.google_maps);
 
         // ==================== add on click listener to buttons ====================
+
+        avatarImageClickable.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // starts new activity "ProfileActivity.java" (go to ProfileActivity screen)
+                onOpenProfileActivity();
+            }
+        });
 
         btnGoogleMaps.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,14 +54,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
     //-------------------------METHODS-----------------------------
+
+    public void onOpenProfileActivity() {
+        Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+        startActivity(intent);
+    }
 
     //method to open google maps in our app
     //method used for our OnCLick for the "open in google maps" button
 
     // NOTE: The text in the field "enterWonderAddress" will automatically be pasted onto google maps search
-    public void onOpenInGoogleMaps(View view){
+    public void onOpenInGoogleMaps(View view) {
 
         //need to add teamAddressTextView later
         EditText teamAddress = (EditText) findViewById(R.id.enterWonderAddress);
@@ -74,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
             new ActivityResultCallback<ActivityResult>() {
                 @Override
                 public void onActivityResult(ActivityResult result) {
-                    if(result.getResultCode() == Activity.RESULT_OK){
+                    if (result.getResultCode() == Activity.RESULT_OK) {
                         //there are no request codes
                         Intent data = result.getData();
 
@@ -83,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
 
                         //need to add all of the flag ID's / images later on
                         String drawableName = "flag02";
-                        switch (data.getIntExtra("imageID", R.id.avatarImage)){
+                        switch (data.getIntExtra("imageID", R.id.avatarImage)) {
                             case R.id.flagid00:
                                 drawableName = "flag_canada";
                                 break;
@@ -115,15 +130,15 @@ public class MainActivity extends AppCompatActivity {
                                 drawableName = "flag_02";
                                 break;
                         }
-                        int resID = getResources().getIdentifier(drawableName,"drawable", getPackageName());
+                        int resID = getResources().getIdentifier(drawableName, "drawable", getPackageName());
                         avatarImage.setImageResource(resID);
                     }
                 }
             });
 
     //method that opens another activity where the user can choose a new avatar for the team profile
-    public void onSetAvatarButton(View view){
-        Intent intent = new Intent(getApplicationContext(),ProfileActivity.class);
+    public void onSetAvatarButton(View view) {
+        Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
         profileActivityResultLauncher.launch(intent);
     }
 }
