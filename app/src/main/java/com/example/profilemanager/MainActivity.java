@@ -11,8 +11,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.ImageView;
+import android.widget.*;
 
 /**
  * Profile Manager app for Android devices
@@ -21,10 +20,26 @@ import android.widget.ImageView;
  */
 public class MainActivity extends AppCompatActivity {
 
+    // create all buttons
+    Button btnGoogleMaps;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // initialize all buttons
+        btnGoogleMaps = findViewById(R.id.google_maps);
+
+        // ==================== add on click listener to buttons ====================
+
+        btnGoogleMaps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onOpenInGoogleMaps(view);
+            }
+        });
+
     }
 
 
@@ -34,10 +49,11 @@ public class MainActivity extends AppCompatActivity {
     //method to open google maps in our app
     //method used for our OnCLick for the "open in google maps" button
 
+    // NOTE: The text in the field "enterWonderAddress" will automatically be pasted onto google maps search
     public void onOpenInGoogleMaps(View view){
 
         //need to add teamAddressTextView later
-        EditText teamAddress = (EditText) findViewById(R.id.teamAddressTextView);
+        EditText teamAddress = (EditText) findViewById(R.id.enterWonderAddress);
 
         //create a Uri from a string. Use the result to create an indent
         Uri gameIntentUri = Uri.parse("http://maps.google.co.in/maps?q=" + teamAddress.getText());
