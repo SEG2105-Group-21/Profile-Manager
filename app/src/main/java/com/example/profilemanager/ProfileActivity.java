@@ -19,9 +19,6 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        // TODO: The TableLayout named "avatar_list" in activity_profile.xml currently does not show up
-        //  on the screen. Must fix. - Kien
-
         // this block of code below is currently redundant as the avatar images in TableLayout
         //  doesn't even show up on screen. Edit or delete at your convenience. - Kien
         avatar00 = (ImageView) findViewById(R.id.flagid00);
