@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // starts new activity "ProfileActivity.java" (go to ProfileActivity screen)
-                onOpenProfileActivity();
+                onSetAvatarButton(view);
             }
         });
 
@@ -92,46 +93,9 @@ public class MainActivity extends AppCompatActivity {
                     if (result.getResultCode() == Activity.RESULT_OK) {
                         //there are no request codes
                         Intent data = result.getData();
+                        int resID = data.getIntExtra("imageID", R.drawable.img_00);
 
-                        //need to add avatarImage later
-                        ImageView avatarImage = (ImageView) findViewById(R.id.avatarImage);
-
-                        //need to add all of the flag ID's / images later on
-                        String drawableName = "flag02";
-                        switch (data.getIntExtra("imageID", R.id.avatarImage)) {
-                            case R.id.flagid00:
-                                drawableName = "flag_canada";
-                                break;
-                            case R.id.flagid01:
-                                drawableName = "flag_01";
-                                break;
-                            case R.id.flagid02:
-                                drawableName = "flag_02";
-                                break;
-                            case R.id.flagid03:
-                                drawableName = "flag_03";
-                                break;
-                            case R.id.flagid04:
-                                drawableName = "flag_04";
-                                break;
-                            case R.id.flagid05:
-                                drawableName = "flag_05";
-                                break;
-                            case R.id.flagid06:
-                                drawableName = "flag_06";
-                                break;
-                            case R.id.flagid07:
-                                drawableName = "flag_07";
-                                break;
-                            case R.id.flagid08:
-                                drawableName = "flag_08";
-                                break;
-                            default:
-                                drawableName = "flag_02";
-                                break;
-                        }
-                        int resID = getResources().getIdentifier(drawableName, "drawable", getPackageName());
-                        avatarImage.setImageResource(resID);
+                        avatarImageClickable.setImageResource(resID);
                     }
                 }
             });
