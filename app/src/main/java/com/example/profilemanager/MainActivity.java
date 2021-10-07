@@ -57,11 +57,6 @@ public class MainActivity extends AppCompatActivity {
 
     //-------------------------METHODS-----------------------------
 
-    public void onOpenProfileActivity() {
-        Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
-        startActivity(intent);
-    }
-
     //method to open google maps in our app
     //method used for our OnCLick for the "open in google maps" button
 
